@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+    <category>
+        <pattern>HI</pattern>
+        <template>
+          Hello, My name is Luna. I am a chat bot serving the IT department of Western Governor’s University. How can I help you?
+        </template>
+    </category>
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            <srai>hi</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HOLA</pattern>
+        <template>
+            <srai>hi</srai>
+        </template>
+    </category>
+	<category>
+        <pattern>IT SUPPORT</pattern>
+        <template>It sounds like you're looking for help with choosing a field in IT. Is that correct?
+            <button>
+                <text>Yes</text>
+                <postback>yes</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>no</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>* IT *</pattern>
+        <template>
+                <srai>IT SUPPORT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* COMPUTER SCIENCE *</pattern>
+        <template>
+            <srai>IT SUPPORT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* ADVICE *</pattern>
+        <template>
+            <srai>IT SUPPORT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* HELP *</pattern>
+        <template>
+            <srai>IT SUPPORT</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>yes</pattern>
+        <template>Sound's great what is your major?
+            <reply>
+                <text>Computer Science</text>
+                <postback>computer science</postback>
+            </reply>
+            <reply>
+                <text>Computer Engineering</text>
+                <postback>engineering</postback>
+            </reply>
+            <reply>
+                <text>Other</text>
+                <postback>other</postback>
+            </reply>
+        </template>
+    </category>
+    <category>
+        <pattern>computer science</pattern>
+        <template>You selected Computer Science. Are you interested in the more technical or creative aspects of the degree?
+            <reply>
+                <text>Technical</text>
+                <postback>technical</postback>
+            </reply>
+            <reply>
+                <text>Creative</text>
+                <postback>creative</postback>
+            </reply>
+        </template>
+    </category>
+    <category>
+        <pattern>creative</pattern>
+        <template>You are a creative person! You should consider one of the following careers:
+            <reply>
+                <text>Frontend Web Development</text>
+                <postback>frontend</postback>
+            </reply>
+        </template>
+    </category>
+    <category>
+        <pattern>technical</pattern>
+        <template>You are a technical person! You should consider one of the following careers:
+            <reply>
+                <text>Backend Web Development</text>
+                <postback>backend</postback>
+            </reply>
+            <reply>
+                <text>Embedded Software Engineering</text>
+                <postback>embedded</postback>
+            </reply>
+        </template>
+    </category>
+  <category>
+        <pattern>engineering</pattern>
+        <template>You selected Computer Engineering! You should consider one of the following careers:
+            <reply>
+                <text>Embedded Software Engineering</text>
+                <postback>embedded</postback>
+            </reply>
+        </template>
+    </category>
+    <category>
+        <pattern>other</pattern>
+        <template>You indicated that you have a major other than Computer Science or Computer Engineering. You should consider one of the following careers:
+            <reply>
+                <text>Techincal Writer</text>
+                <postback>technicalwriter</postback>
+            </reply>
+            <reply>
+                <text>Project Manager</text>
+                <postback>pm</postback>
+            </reply>
+        </template>
+    </category>
+    <category>
+        <pattern>backend</pattern>
+        <template>
+            You should consider choosing a career as a backend web developer! Backend development is focused on the behind the scenes software that keep websites, web apps, and mobile applications running.
+            This can include programming software for servers, applications, and databases. As a software developer you will be implementing the business logic using programming languages like PHP, Python, Ruby, or Node.JS.
+            You will also use frameworks like Laravel, Django, or Ruby on Rails. If you enjoy technical challenges this is the career for you!
+            <button>
+                <text>Learn more</text>
+                <url>https://www.youtube.com/watch?v=XBu54nfzxAQ</url>
+            </button>
+            <button>
+                <text>Start Over</text>
+                <postback>IT SUPPORT</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>frontend</pattern>
+        <template>
+            You should consider choosing a career as a frontend web developer! Frontend development involves developing websites/web apps/ and mobile apps, 
+            using web languages such as HTML, CSS, and JavaScript. Frontend development utilizes frameworks like Angular and React to create dynamic and beautiful web pages.
+            While frontend development melds the techincal aspect of computer science with artistic design principles.
+            <button>
+                <text>Learn more</text>
+                <url>https://www.youtube.com/watch?v=qyHyFsT7Hig</url>
+            </button>
+            <button>
+                <text>Start Over</text>
+                <postback>IT SUPPORT</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>embedded</pattern>
+        <template>
+            Embedded software engineers design and code the programs that run on embedded systems, computers that form an integral part of a greater device or machine.
+            This can inovlve programming in languages like C, C++, Rust or Python for computer hardware that will form aircraft, cars, medical devices, and even spacecraft!
+            Embedded software engineers need to understand the mechanics of the hardware and how the software and hardware should interact, this means that this career leads itself
+            well to techinical individuals.
+            <button>
+                <text>Learn more</text>
+                <url>https://www.youtube.com/watch?v=3e2ozrMZXHM</url>
+            </button>
+            <button>
+                <text>Start Over</text>
+                <postback>IT SUPPORT</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>technicalwriter</pattern>
+        <template>
+            Technical writers prepare techincal instruction manuals, how-to guides, articles, and other supporting publications 
+            to communicate complex and technical information effecitively. Technical writers can work developing documentation for complex software applications,
+            hardware tutorials and more. Every part of the developmenet process must be documented so this field will always have opprotunities for new and qualified, candidates!
+            <button>
+                <text>Learn more</text>
+                <url>https://www.youtube.com/watch?v=qnnkAWP55Ww</url>
+            </button>
+            <button>
+                <text>Start Over</text>
+                <postback>IT SUPPORT</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>pm</pattern>
+        <template>
+            Project management is the process of leading the work of a team to achieve all project goals within given constraints. 
+            You will be responsible for managing projects from start to finish, this involves working with teams to ensure that projects are executed efficiently, effectively, and within budget. 
+            As project manager you will have a rewarding career focusing on getting the most out of your team of developers!
+            <button>
+                <text>Learn more</text>
+                <url>https://www.youtube.com/watch?v=5cO5nHmMxrw</url>
+            </button>
+            <button>
+                <text>Start Over</text>
+                <postback>IT SUPPORT</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>no</pattern>
+        <template>At the moment I am only able to provide support for choosing a field for IT careers. I apologize for the inconvenience. Thank you.</template>
+    </category>
+</aiml>
